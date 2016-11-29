@@ -1,6 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%-- <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %> --%>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@ page session="false"%>
 <%@ page isELIgnored="false" %>
 <html>
@@ -14,7 +14,7 @@
 	</style>
 </head>
 <body>
-<%-- <h1>
+<h1>
 	Add a Person
 </h1>
 
@@ -70,7 +70,7 @@
 	</tr>
 </table>	
 </form:form>
-<br> --%>
+<br>
 <h3>Persons List</h3>
 <c:if test="${!empty listPersons}">
 	<table class="tg">
@@ -86,8 +86,8 @@
 			<td>${person.id}</td>
 			<td>${person.name}</td>
 			<td>${person.country}</td>
-			<%-- <td><a href="<c:url value='/edit/${person.id}' />" >Edit</a></td>
-			<td><a href="<c:url value='/remove/${person.id}' />" >Delete</a></td> --%>
+			<td><a href="<c:url value='/edit/${person.id}' />" >Edit</a></td>
+			<td><a href="<c:url value='/remove/${person.id}' />" >Delete</a></td>
 		</tr>
 	</c:forEach>
 	</table>
